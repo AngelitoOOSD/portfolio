@@ -4,12 +4,23 @@ const path = require('path');
 const port = 8000;
 
 app.use(express.static(path.join(__dirname, './views')));
+app.set("view engine", "html");
 
 app.listen(port, () => {
     console.log(`Portfolio listenting on port ${port}`);
 });
 
-app.get("/", (req, res) => {
-    res.send();
+app.get('/', (req, res) => {
+    res.render("index");
     console.log("Main page");
+});
+
+app.get('/websites', (req, res) => {
+    res.render("websites");
+    console.log("Websites page");
+});
+
+app.get('/androidapps', (req, res) => {
+    res.render("androidapps");
+    console.log("Android apps page");
 });

@@ -20,45 +20,142 @@ body{
      }
 }
 
+.links, .div1{
+    padding-top: 0;
+    margin-top: 0;
+}
+
 /*--------------------------------------------------H3---------------------------------------------------------------------*/
 h3{
-    font-size: 30px;
-    padding-left: 100px;
+    font-family: Futura, sans-serif;
+    font-weight: 900;
+    transition-timing-function: ease-out;
+    transition: .4s;
+    margin: 0;
+    font-size: 90px;
+    text-align: center;
 }
 
 h3:hover{
+    transition-timing-function: ease-in;
+    transition: .4s;
     text-shadow: 1px 1px rgba(47, 65, 71, 0.384);
-    transition: all text-shadow 0.3s ease-in-out; 
+    -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    z-index: 100;
+}
+
+hr{
+    margin:0;
 }
 
 /*--------------------------------------------------UL---------------------------------------------------------------------*/
-ul{
+.links, .div1, .div2{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.links{
+    padding-top: 100px;
+    font-family: Futura, sans-serif;
+    font-weight: 900;
     list-style-type: none;
     font-size: 50px;
-    padding-left: 250px;
-    
+    padding-left: 200px;
+    height: 500px;
 }
-li{
-    padding-top: 80px;
+
+a:link, a:visited{
+    color: black;
+    padding-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    transition-timing-function: ease-out;
+    transition: .4s;
+    padding-top: 100px;
+}
+
+p{
     width: 300px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.151),
     10px 20px 5px rgba(0, 0, 0, 0.164),
     -10px 20px 5px rgba(0, 0, 0, 0.137);
+    transform: scale(1);
 }
 
-li:hover{
+p:hover{
+  transition-timing-function: ease-in;
+  transition: .4s;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.795),
   10px 20px 5px rgba(0, 0, 0, 0.164),
   -10px 20px 5px rgba(0, 0, 0, 0.719);
-  transition: all .2s ease-in-out;
   transform: scale(1.02); 
 }
 
-li:active{
+a:active{
     color: grey;
     transition: all 0s ease-out;
 }
 
+/*--------------------------------------------------------DIV-----------------------------------------------------------*/
+.div2 image{
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.div1{
+    height: 500px;
+    width: 800px;
+    background-color: rgb(144,144,144);
+    padding: 80px;
+    margin: 100px;
+    box-shadow: rgba(17, 17, 26, 0.205) 0px 8px 24px, rgba(17, 17, 26, 0.164) 0px 16px 56px, rgba(17, 17, 26, 0.185) 0px 24px 80px;
+}
+.div2{
+    height: 400px;
+    width: 700px;
+    background-color: rgb(248,248,248);
+    padding: 80px;
+    margin: 100px;
+    z-index: 200;
+    position: relative;
+    top: -130px;
+    left: -130px;
+    display: flex;
+}
+
+.div2:hover, .div1:hover{
+    transition-timing-function: ease-in;
+    transition: .9s;
+    transform: scale(2.5);
+    box-shadow: rgba(17, 17, 26, 0.404) 0px 8px 24px, rgba(17, 17, 26, 0.418) 0px 16px 56px, rgba(17, 17, 26, 0.363) 0px 24px 80px;
+}
+
+.div1:hover{
+    transition-timing-function: ease-in;
+    transition: .9s;
+    transform: scale(.5);
+}
+
+
+.div1, .div2{
+    transition-timing-function: ease-in-out;
+    transition: .5s;
+    transform: scale(1);
+}
+
+/*--------------------------------------------------------Section-----------------------------------------------------------*/
+section article.skills{
+    background-color: rgb(111, 233, 192);
+}
+
+section article.info{
+    background-color: rgb(111, 160, 233);
+}
 
 /*--------------------------------------------------------Article-----------------------------------------------------------*/
 article{
@@ -68,11 +165,32 @@ article{
 
 h2{
     text-align: center;
-    font-size: 20px;
+    font-size: 60px;
 }
 
 p{
-    padding-left: 40px;
+    text-align: center;
 }
+
+.skills{
+  border-radius: 5px;
+  transition: 0.4s ease-in-out transform
+}
+
+.skills:hover {
+    transform: scale3d(1, 1, 1);
+    transform: scale(1.12);
+}
+
+.info{
+    border-radius: 5px;
+    transition: 0.4s ease-in-out transform
+  }
+  
+  .info:hover {
+      transform: scale3d(1, 1, 1);
+      transform: scale(1.12);
+  }
+
 
 

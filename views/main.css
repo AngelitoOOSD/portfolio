@@ -1,0 +1,78 @@
+
+
+body{
+    background-color: rgb(186, 224, 211);
+    background-image: url("background4.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+/*--------------------------------------------------H3---------------------------------------------------------------------*/
+h3{
+    font-size: 30px;
+    padding-left: 100px;
+}
+
+h3:hover{
+    text-shadow: 1px 1px rgba(47, 65, 71, 0.384);
+    transition: all text-shadow 0.3s ease-in-out; 
+}
+
+/*--------------------------------------------------UL---------------------------------------------------------------------*/
+ul{
+    list-style-type: none;
+    font-size: 50px;
+    padding-left: 250px;
+    
+}
+li{
+    padding-top: 80px;
+    width: 300px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.151),
+    10px 20px 5px rgba(0, 0, 0, 0.164),
+    -10px 20px 5px rgba(0, 0, 0, 0.137);
+}
+
+li:hover{
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.795),
+  10px 20px 5px rgba(0, 0, 0, 0.164),
+  -10px 20px 5px rgba(0, 0, 0, 0.719);
+  transition: all .2s ease-in-out;
+  transform: scale(1.02); 
+}
+
+li:active{
+    color: grey;
+    transition: all 0s ease-out;
+}
+
+
+/*--------------------------------------------------------Article-----------------------------------------------------------*/
+article{
+    font-size: 20px;
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+p{
+    padding-left: 40px;
+}
+
+

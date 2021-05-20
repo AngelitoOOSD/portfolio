@@ -1,8 +1,7 @@
 
-
 body{
     background-color: rgb(186, 224, 211);
-    background-image: url("background4.jpg");
+    background-image: url("background5.jpg");
     background-size: cover;
     background-attachment: fixed;
 
@@ -10,15 +9,15 @@ body{
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
-@keyframes fadeInAnimation {
+/* page load fade in animation */
+/* @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
      }
-}
+} */
 
 .links, .div1{
     padding-top: 0;
@@ -113,7 +112,7 @@ a:active{
 .div1{
     height: 500px;
     width: 800px;
-    background-color: rgb(111, 233, 192);
+    background-color: #3d997080;
     padding: 80px;
     margin: 100px;
     box-shadow: rgba(17, 17, 26, 0.205) 0px 8px 24px, rgba(17, 17, 26, 0.164) 0px 16px 56px, rgba(17, 17, 26, 0.185) 0px 24px 80px;
@@ -121,7 +120,7 @@ a:active{
 .div2{
     height: 400px;
     width: 700px;
-    background-color: rgb(248,248,248);
+    background-color: #397e5fd8;
     padding: 80px;
     margin: 100px;
     z-index: 200;
@@ -196,4 +195,54 @@ p{
   }
 
 
+
+/*--------------------------------------------------------Page Transitions-----------------------------------------------------------*/
+.transition1{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index:101;
+    background-color: gray;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s ease-out;
+}
+
+.transition1.is-active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.transition2{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:-100%; /*transitioning from the left so left has to be one left-width to the left */
+    width: 100%;
+    right: 0;
+    z-index:101;
+    background-color: gray;
+    transition: .5s ease-out;
+}
+
+.transition2.is-active{
+    left: 0px;
+}
+
+.transition3{
+    position: fixed;
+    top:100%;
+    height: 100%;
+    left:0;
+    right: 0;
+    z-index:101;
+    background-color: gray;
+    transition: .5s ease-out;
+}
+
+.transition3.is-active{
+    top:0;
+}
 

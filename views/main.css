@@ -158,7 +158,8 @@ a:active{
 .div1{
     height: 500px;
     width: 800px;
-    background-color: rgb(248,184,120, .67);
+    /* background-color: #7ccac8; */
+    background-color: rgba(131, 128, 128, 0.39);
     padding: 80px;
     margin: 100px;
     box-shadow: rgba(17, 17, 26, 0.205) 0px 8px 24px, rgba(17, 17, 26, 0.164) 0px 16px 56px, rgba(17, 17, 26, 0.185) 0px 24px 80px;

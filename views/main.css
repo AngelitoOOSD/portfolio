@@ -203,7 +203,7 @@ section article.info{
     left:0;
     right: 0;
     z-index:101;
-    background-color: gray;
+    background-color: #48d1cc;
     opacity: 0;
     pointer-events: none;
     transition: .5s ease-out;
@@ -222,7 +222,7 @@ section article.info{
     width: 100%;
     right: 0;
     z-index:101;
-    background-color: gray;
+    background-color: #48d1cc;
     transition: .5s ease-out;
 }
 
@@ -237,7 +237,7 @@ section article.info{
     left:0;
     right: 0;
     z-index:101;
-    background-color: gray;
+    background-color: #48d1cc;
     transition: .5s ease-out;
 }
 

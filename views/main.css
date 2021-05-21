@@ -2,23 +2,15 @@
 body{
     background-color: rgb(186, 224, 211);
     background-image: url("background5.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-attachment: fixed;
-
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    overflow-y: auto;
 }
-/* page load fade in animation */
-/* @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-} */
 
+body::-webkit-scrollbar{
+    width: 0 !important
+}
 .links, .div1{
     padding-top: 0;
     margin-top: 0;
@@ -26,13 +18,13 @@ body{
 
 /*--------------------------------------------------H3---------------------------------------------------------------------*/
 h3{
-    font-family: Futura, sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-weight: 900;
     transition-timing-function: ease-out;
     transition: .4s;
     margin: 0;
     font-size: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 h3:hover{
@@ -49,7 +41,51 @@ hr{
     margin:0;
 }
 
+
+.header::after{
+    padding-top: 50%;
+    display: block;
+}
+
+
 /*--------------------------------------------------UL---------------------------------------------------------------------*/
+
+/* custom underline animation */
+.custom-underline{
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    text-align: left;
+}
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+  text-decoration: none;
+}
+.custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.links .custom-underline::after {
+    top: 100%;
+    height: 2px;
+    width: 0%;
+    left: 0%;
+    background-color: rgba(255, 214, 168, 0.808);
+    transition: 0.5s ease all .1s;
+  }
+  
+p:hover .custom-underline::after {
+    width: 90%;
+    transition: 0.5s ease all;
+  }
+
+
+
+
+
 .links, .div1, .div2{
     display: inline-block;
     vertical-align: top;
@@ -57,12 +93,14 @@ hr{
 
 .links{
     padding-top: 100px;
-    font-family: Futura, sans-serif;
+    font-family: 'Chela One', cursive;
     font-weight: 900;
     list-style-type: none;
-    font-size: 50px;
-    padding-left: 200px;
+    font-size: 60px;
+    padding-left: 150px;
+    padding-bottom: 100px;
     height: 500px;
+    width: 400px;
 }
 
 a:link, a:visited{
@@ -72,12 +110,14 @@ a:link, a:visited{
 
 a {
     text-decoration: none;
-    /* transition-timing-function: ease-out;
-    transition: .4s;
-    padding-top: 100px; */
+}
+
+.short{
+    font-size: 30px;
 }
 
 p{
+    text-align: left;
     text-decoration: none;
     transition-timing-function: ease-out;
     transition: .4s;
@@ -88,49 +128,44 @@ p{
     transform: scale(1);
 }
 
+.short{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 50px;
+}
+
 p:hover{
   transition-timing-function: ease-in;
   transition: .4s;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.795),
+  text-shadow: 0px 0px rgba(0, 0, 0, 0.795),
   10px 20px 5px rgba(0, 0, 0, 0.164),
   -10px 20px 5px rgba(0, 0, 0, 0.719);
   transform: scale(1.2); 
 }
 
 a:active{
-    color: grey;
+    color: whitesmoke;
     transition: all 0s ease-out;
 }
 
 /*--------------------------------------------------------DIV-----------------------------------------------------------*/
-.div2 image{
+.image{
     flex-shrink: 0;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 500px;
 }
 
 .div1{
     height: 500px;
     width: 800px;
-    background-color: #3d997080;
+    background-color: rgb(248,184,120, .67);
     padding: 80px;
     margin: 100px;
     box-shadow: rgba(17, 17, 26, 0.205) 0px 8px 24px, rgba(17, 17, 26, 0.164) 0px 16px 56px, rgba(17, 17, 26, 0.185) 0px 24px 80px;
 }
-.div2{
-    height: 400px;
-    width: 700px;
-    background-color: #397e5fd8;
-    padding: 80px;
-    margin: 100px;
-    z-index: 200;
-    position: relative;
-    top: -130px;
-    left: -130px;
-    display: flex;
-}
 
-.div2:hover, .div1:hover{
+
+.div1:hover{
     transition-timing-function: ease-in;
     transition: .9s;
     transform: scale(2.5);
@@ -140,11 +175,11 @@ a:active{
 .div1:hover{
     transition-timing-function: ease-in;
     transition: .9s;
-    transform: scale(.5);
+    transform: scale(1.2);
 }
 
 
-.div1, .div2{
+.div1{
     transition-timing-function: ease-in-out;
     transition: .5s;
     transform: scale(1);
@@ -158,42 +193,6 @@ section article.skills{
 section article.info{
     background-color: rgb(111, 160, 233);
 }
-
-/*--------------------------------------------------------Article-----------------------------------------------------------*/
-article{
-    font-size: 20px;
-    padding: 10px;
-}
-
-h2{
-    text-align: center;
-    font-size: 60px;
-}
-
-p{
-    text-align: center;
-}
-
-.skills{
-  border-radius: 5px;
-  transition: 0.4s ease-in-out transform
-}
-
-.skills:hover {
-    transform: scale3d(1, 1, 1);
-    transform: scale(1.12);
-}
-
-.info{
-    border-radius: 5px;
-    transition: 0.4s ease-in-out transform
-  }
-  
-  .info:hover {
-      transform: scale3d(1, 1, 1);
-      transform: scale(1.12);
-  }
-
 
 
 /*--------------------------------------------------------Page Transitions-----------------------------------------------------------*/

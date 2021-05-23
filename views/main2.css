@@ -1,21 +1,34 @@
-html, body {
-    width: 100%;
-    height:100%;
-  }
-  
-body{
+
+/* body{
     background-color: rgb(186, 224, 211);
-    background-image: url("background5.jpg");
+    background-image: url("--background5.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-attachment: fixed;
-    overflow-y: auto;
+    overflow-y: auto; 
+} */
+
+body {
+    background: linear-gradient(-45deg, #1a1919, #1b1618, rgb(30, 35, 41), #141b1a);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 body::-webkit-scrollbar{
     width: 0 !important
 }
-
 .links, .div1{
     padding-top: 0;
     margin-top: 0;
@@ -30,6 +43,7 @@ h3{
     margin: 0;
     font-size: 20px;
     text-align: center;
+    color: whitesmoke;
 }
 
 h3:hover{
@@ -88,35 +102,32 @@ p:hover .custom-underline::after {
   }
 
 
-.links, .div1{
+.links, .div1, .div2{
     display: inline-block;
     vertical-align: top;
 }
 
 .links{
-    /* padding-top: 100px;
-    font-family: 'Chela One', cursive;
-    font-weight: 900;
-    list-style-type: none;
-    font-size: 60px;
-    padding-left: 150px;
-    padding-bottom: 100px;
-    height: 500px;
-    width: 400px; */
-
     padding-top: 100px;
-    font-family: 'Chela One', cursive;
+    font-family: 'Bebas Neue', cursive;
     list-style-type: none;
     font-size: 50px;
-    padding:100px;
+    padding:50px;
     padding-left: 200px;
     height: 40%;
     width: 10%;
+    margin-top: 100px;
+    /* transform: scaleX(0); */
 }
+
+/* .links:hover{
+    transform: ;
+} */
 
 a:link, a:visited{
     color: black;
     padding-top: 10px;
+    color: whitesmoke;
 }
 
 a {
@@ -137,16 +148,17 @@ p{
     10px 20px 5px rgba(0, 0, 0, 0.164),
     -10px 20px 5px rgba(0, 0, 0, 0.137);
     transform: scale(1);
-    display: inline-block;
+    
 }
 
 .short{
     display: inline-block;
     vertical-align: top;
     padding-left: 50px;
+    color: rgb(214, 214, 214);
 }
 
-p:hover{
+.links p:hover{
   transition-timing-function: ease-in;
   transition: .4s;
   text-shadow: 0px 0px rgba(0, 0, 0, 0.795),
@@ -156,7 +168,7 @@ p:hover{
 }
 
 a:active{
-    color: whitesmoke;
+    color: rgb(188, 187, 199);
     transition: all 0s ease-out;
 }
 
@@ -164,21 +176,16 @@ a:active{
 .image{
     flex-shrink: 0;
     width: 400px;
-    height: 400px; 
-    /* padding: 0;
-    display: inline-block;
-    margin: 0 auto;
-    height: auto;
-    width: 100%; */
+    height: 500px;
 }
 
 .div1{
-    display: inline-block;
+    border-radius: 25px;
     height: 500px;
     width: 800px;
     /* background-color: #7ccac8; */
-    background-color: rgba(131, 128, 128, 0.39);
-    /* padding: 80px; */
+    background-color: rgba(252, 252, 252, 0.219);
+    padding: 80px;
     margin: 100px;
     box-shadow: rgba(17, 17, 26, 0.205) 0px 8px 24px, rgba(17, 17, 26, 0.164) 0px 16px 56px, rgba(17, 17, 26, 0.185) 0px 24px 80px;
 }
@@ -205,13 +212,13 @@ a:active{
 }
 
 /*--------------------------------------------------------Section-----------------------------------------------------------*/
-section article.skills{
+/* section article.skills{
     background-color: rgb(111, 233, 192);
 }
 
 section article.info{
     background-color: rgb(111, 160, 233);
-}
+} */
 
 
 /*--------------------------------------------------------Page Transitions-----------------------------------------------------------*/
@@ -256,7 +263,7 @@ section article.info{
     left:0;
     right: 0;
     z-index:101;
-    background-color: #48d1cc;
+    background-color: #212424;
     transition: .5s ease-out;
 }
 
@@ -264,3 +271,14 @@ section article.info{
     top:0;
 }
 
+/*--------------------------------------------------------Footer-----------------------------------------------------------*/
+.logos{
+    padding:10px; 
+    height: 50px; 
+    width: 50px; 
+    float: right;
+}
+
+.logos:hover{
+    transform: scale(1.2);
+}

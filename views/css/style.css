@@ -485,6 +485,10 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   z-index: 1;
   margin-bottom: 25px;
 }
+
+/* .blog-entry .blog-img:hover {
+  transform: scale(1.2);
+} */
 .blog-entry .blog-img img {
   position: relative;
   max-width: 100%;

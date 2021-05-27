@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const port = 8000;
 
+//mongodb local connection string: mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
+
 app.use(express.static(path.join(__dirname, './views')));
 app.set("view engine", "html");
 
@@ -24,3 +26,4 @@ app.get('/androidapps', (req, res) => {
     res.render("androidapps");
     console.log("Android apps page");
 });
+

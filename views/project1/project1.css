@@ -1,0 +1,99 @@
+@media only screen and (max-width: 360px) {
+  
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.title{
+  background-color: rgb(94, 66, 66);
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+  width: 100%;
+  height: 80px;
+}
+
+.search-container {
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+}
+
+.search-container button{
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ccc;
+  }
+
+
+.fa-search:before {
+    content: "\f002";
+}
+
+.main > *{
+  vertical-align: top;
+}
+
+
+
+.navs{
+  background-color: aquamarine;
+  width: 20%;
+  height: 100%;
+  padding: 0px;
+  display: inline-block;
+  font-size: 30px;
+}
+
+.navs ul{
+  list-style-type: none;
+}
+
+.navs li {
+  padding: 20px;
+}
+
+.navs a:hover, a:visited, a:link, a:active{
+  text-decoration: none;
+  color: #000;
+}
+
+.video-container{
+    background: rgba(153, 0, 255, 0.603);
+    height: 100%;
+    width: 70%;
+    margin: 0px; 
+    /* margin-left: 600px; */
+    padding: 0px;
+    display: inline-block;
+}
+
+
+
+#images{
+  height: 300px;
+  width: 400px;
+  padding: 20px;
+}
+
+
+
+#description {
+  text-align: center;
+  padding: 0px;
+  margin: 0;
+  width: 10%;
+  font-size: 20px;
+}

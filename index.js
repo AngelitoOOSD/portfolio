@@ -17,13 +17,13 @@ app.get('/', (req, res) => {
     console.log("Main page");
 });
 
-app.get('/websites', (req, res) => {
-    res.render("websites");
-    console.log("Websites page");
-});
+// app.get('/websites', (req, res) => {
+//     res.render("websites");
+//     console.log("Websites page");
+// });
 
-app.get('/androidapps', (req, res) => {
-    res.render("androidapps");
-    console.log("Android apps page");
-});
+// app.get('/androidapps', (req, res) => {
+//     res.render("androidapps");
+//     console.log("Android apps page");
+// });
 
